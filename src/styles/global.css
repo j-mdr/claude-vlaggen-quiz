@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* Custom theme tokens via Tailwind v4 @theme */
+@theme {
+  --color-surface: #1e293b;
+  --color-surface-hover: #334155;
+  --color-border: #334155;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+}
+
+/* Globale animaties */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+@keyframes pulse-gentle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@utility animate-fade-in {
+  animation: fade-in 0.4s ease forwards;
+}
+
+@utility animate-scale-in {
+  animation: scale-in 0.3s ease forwards;
+}
+
+@utility animate-shake {
+  animation: shake 0.4s ease;
+}
+
+@utility animate-pulse-gentle {
+  animation: pulse-gentle 0.4s ease;
+}
+
+@utility animate-slide-up {
+  animation: slide-up 0.5s ease forwards;
+}
+
+@utility animate-pulse-infinite {
+  animation: pulse-gentle 1s ease infinite;
+}
+
+/* Auto-advance timer balk: krimpt van 100% naar 0% */
+@keyframes shrink {
+  from { width: 100%; }
+  to { width: 0%; }
+}

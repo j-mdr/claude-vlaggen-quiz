@@ -1,0 +1,12 @@
+---
+/**
+ * Hoofdpagina - Rendert de quiz layout met het React island.
+ * client:load zorgt dat het React component direct wordt gehydrateerd.
+ */
+import Layout from "../layouts/Layout.astro";
+import QuizApp from "../components/QuizApp";
+---
+
+<Layout title="Vlaggen Quiz">
+  <QuizApp client:load />
+</Layout>
